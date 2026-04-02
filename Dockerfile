@@ -10,7 +10,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy only runtime backend code and required data files
 COPY EDITH/backend ./EDITH/backend
-COPY EDITH/data ./EDITH/data
+COPY data ./EDITH/data
 
 # Expose port
 EXPOSE 8000

@@ -17,6 +17,9 @@ EDITH/frontend/
 EDITH/data/chroma_db/
 EDITH/data/repos/
 EDITH/data/diagram_cache/
+data/chroma_db/
+data/repos/
+data/diagram_cache/
 
 # Tests and local scripts
 EDITH/test_hr.py
