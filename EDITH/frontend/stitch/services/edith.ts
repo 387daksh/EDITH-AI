@@ -1,7 +1,7 @@
 // EDITH Backend API Service with Authentication
 // Connects to the FastAPI backend at http://127.0.0.1:8000
 
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = (import.meta.env.VITE_API_BASE as string | undefined)?.replace(/\/$/, "") || "http://127.0.0.1:8000";
 
 // ==================== AUTH ====================
 export type Role = "admin" | "employee" | "hr";
