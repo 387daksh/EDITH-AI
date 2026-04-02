@@ -1,0 +1,17 @@
+{
+  "admin@edith.ai": {
+    "password": "admin123",
+    "role": "admin",
+    "name": "Admin"
+  },
+  "employee@edith.ai": {
+    "password": "emp123",
+    "role": "employee",
+    "name": "Demo Employee"
+  },
+  "hr@edith.ai": {
+    "password": "hr123",
+    "role": "hr",
+    "name": "HR Manager"
+  }
+}

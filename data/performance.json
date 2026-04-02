@@ -1,0 +1,138 @@
+{
+  "admin@edith.ai": {
+    "overall_score": 89.3,
+    "trend": 3.0,
+    "skills": [
+      {
+        "subject": "Coding",
+        "A": 88
+      },
+      {
+        "subject": "Design",
+        "A": 87
+      },
+      {
+        "subject": "Comms",
+        "A": 81
+      },
+      {
+        "subject": "Leadership",
+        "A": 79
+      },
+      {
+        "subject": "Speed",
+        "A": 91
+      },
+      {
+        "subject": "Debug",
+        "A": 90
+      }
+    ],
+    "metrics": [
+      {
+        "label": "Code Quality",
+        "val": 97
+      },
+      {
+        "label": "Collaboration",
+        "val": 95
+      },
+      {
+        "label": "Velocity",
+        "val": 70
+      },
+      {
+        "label": "Compliance",
+        "val": 100
+      }
+    ],
+    "assessments": [
+      {
+        "name": "Security Awareness",
+        "date": "2024-01-15",
+        "status": "Passed",
+        "score": "100/100"
+      },
+      {
+        "name": "Cloud Architecture",
+        "date": "2024-02-10",
+        "status": "Passed",
+        "score": "92/100"
+      },
+      {
+        "name": "Team Leadership",
+        "date": "In Progress",
+        "status": "Active",
+        "score": "--/100"
+      }
+    ]
+  },
+  "daksh@edith.ai": {
+    "overall_score": 92.7,
+    "trend": 1.1,
+    "skills": [
+      {
+        "subject": "Coding",
+        "A": 74
+      },
+      {
+        "subject": "Design",
+        "A": 69
+      },
+      {
+        "subject": "Comms",
+        "A": 80
+      },
+      {
+        "subject": "Leadership",
+        "A": 71
+      },
+      {
+        "subject": "Speed",
+        "A": 85
+      },
+      {
+        "subject": "Debug",
+        "A": 85
+      }
+    ],
+    "metrics": [
+      {
+        "label": "Code Quality",
+        "val": 96
+      },
+      {
+        "label": "Collaboration",
+        "val": 81
+      },
+      {
+        "label": "Velocity",
+        "val": 89
+      },
+      {
+        "label": "Compliance",
+        "val": 100
+      }
+    ],
+    "assessments": [
+      {
+        "name": "Security Awareness",
+        "date": "2024-01-15",
+        "status": "Passed",
+        "score": "100/100"
+      },
+      {
+        "name": "Cloud Architecture",
+        "date": "2024-02-10",
+        "status": "Passed",
+        "score": "92/100"
+      },
+      {
+        "name": "Team Leadership",
+        "date": "In Progress",
+        "status": "Active",
+        "score": "--/100"
+      }
+    ]
+  }
+}

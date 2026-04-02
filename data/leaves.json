@@ -1,0 +1,10 @@
+{
+  "balances": {
+    "daksh@edith.ai": {
+      "annual": 20,
+      "sick": 10,
+      "casual": 5
+    }
+  },
+  "requests": []
+}

@@ -1,0 +1,40 @@
+{
+  "daksh@edith.ai": [
+    {
+      "id": 1,
+      "title": "Sign Employment Contract",
+      "category": "Legal",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "title": "Setup Company Email",
+      "category": "IT",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "title": "Join Slack Channels",
+      "category": "IT",
+      "completed": true
+    },
+    {
+      "id": 4,
+      "title": "Meet the Team",
+      "category": "Social",
+      "completed": false
+    },
+    {
+      "id": 5,
+      "title": "Setup Payroll Info",
+      "category": "Finance",
+      "completed": false
+    },
+    {
+      "id": 6,
+      "title": "Read Employee Handbook",
+      "category": "Compliance",
+      "completed": false
+    }
+  ]
+}
