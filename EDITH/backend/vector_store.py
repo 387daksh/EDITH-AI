@@ -2,7 +2,11 @@ import os
 import chromadb
 from chromadb.utils import embedding_functions
 from typing import List, Dict, Any
-from sentence_transformers import CrossEncoder
+
+try:
+    from sentence_transformers import CrossEncoder
+except Exception:
+    CrossEncoder = None
 
 # Use persistent client
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,8 +24,10 @@ RERANKER_MODEL = "cross-encoder/ms-marco-MiniLM-L-6-v2"
 _reranker = None
 
 def get_reranker():
-    """Lazy-load the reranker model."""
+    """Lazy-load the reranker model; return None if unavailable."""
     global _reranker
+    if CrossEncoder is None:
+        return None
     if _reranker is None:
         print("Loading reranker model...", flush=True)
         _reranker = CrossEncoder(RERANKER_MODEL, max_length=512)
@@ -32,12 +38,9 @@ def get_db_client():
 
 def get_collection():
     client = get_db_client()
-    
-    # Use premium embedding model
-    print(f"Loading embedding model: {EMBEDDING_MODEL}...", flush=True)
-    emb_fn = embedding_functions.SentenceTransformerEmbeddingFunction(
-        model_name=EMBEDDING_MODEL
-    )
+
+    # Prefer a lightweight default embedding function to avoid heavy torch deps in deployment.
+    emb_fn = embedding_functions.DefaultEmbeddingFunction()
         
     return client.get_or_create_collection(
         name="edith_premium_v2",  # New collection for better embeddings
@@ -94,24 +97,30 @@ def query_documents(query_text: str, n_results: int = 5) -> Dict[str, Any]:
     metas = candidates['metadatas'][0]
     ids = candidates['ids'][0]
     
-    # Step 2: Rerank with cross-encoder
+    # Step 2: Rerank with cross-encoder (if available)
     reranker = get_reranker()
-    
-    # Create query-document pairs for scoring
-    pairs = [(query_text, doc) for doc in docs]
-    scores = reranker.predict(pairs)
-    
-    # Step 3: Sort by reranker score using indices (avoids comparing dicts)
-    indexed_scores = list(enumerate(scores))
-    indexed_scores.sort(key=lambda x: x[1], reverse=True)
-    top_indices = [idx for idx, _ in indexed_scores[:n_results]]
-    
-    # Unpack results using sorted indices
-    reranked_docs = [docs[i] for i in top_indices]
-    reranked_metas = [metas[i] for i in top_indices]
-    reranked_ids = [ids[i] for i in top_indices]
-    
-    print(f"Reranked {len(docs)} candidates → top {len(reranked_docs)}", flush=True)
+
+    if reranker is None:
+        # Fallback: return top retrieval results without reranking.
+        reranked_docs = docs[:n_results]
+        reranked_metas = metas[:n_results]
+        reranked_ids = ids[:n_results]
+    else:
+        # Create query-document pairs for scoring
+        pairs = [(query_text, doc) for doc in docs]
+        scores = reranker.predict(pairs)
+
+        # Step 3: Sort by reranker score using indices (avoids comparing dicts)
+        indexed_scores = list(enumerate(scores))
+        indexed_scores.sort(key=lambda x: x[1], reverse=True)
+        top_indices = [idx for idx, _ in indexed_scores[:n_results]]
+
+        # Unpack results using sorted indices
+        reranked_docs = [docs[i] for i in top_indices]
+        reranked_metas = [metas[i] for i in top_indices]
+        reranked_ids = [ids[i] for i in top_indices]
+
+        print(f"Reranked {len(docs)} candidates -> top {len(reranked_docs)}", flush=True)
     
     return {
         'documents': [reranked_docs],
