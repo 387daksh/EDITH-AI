@@ -1,0 +1,33 @@
+# VCS
+.git
+.gitignore
+
+# Python caches / local envs
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+EDITH/venv/
+venv/
+
+# Frontend code is not needed in backend container
+EDITH/frontend/
+
+# Large local data/artifacts not needed in image
+EDITH/data/chroma_db/
+EDITH/data/repos/
+EDITH/data/diagram_cache/
+
+# Tests and local scripts
+EDITH/test_hr.py
+EDITH/check_setup.py
+EDITH/debug_imports.py
+EDITH/populate_hr_data.py
+
+# Local env files
+EDITH/.env
+.env
+
+# Node artifacts
+**/node_modules/
+**/dist/
