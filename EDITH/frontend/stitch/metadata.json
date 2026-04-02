@@ -1,0 +1,8 @@
+
+{
+  "name": "EDITH - Intelligence Hub",
+  "description": "A comprehensive developer and HR intelligence platform featuring code architecture visualization, performance tracking, and an AI-powered knowledge engine.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
