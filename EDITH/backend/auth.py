@@ -36,11 +36,11 @@ def load_users() -> dict:
     if os.path.exists(USERS_FILE):
         with open(USERS_FILE, 'r') as f:
             return json.load(f)
-    # Default users
+    # Default users used when EDITH/data/users.json is missing in cloud deploys.
     return {
-        "admin@edith.ai": {"password": "admin123", "role": "admin", "name": "Admin"},
-        "employee@edith.ai": {"password": "emp123", "role": "employee", "name": "Demo Employee"},
-        "hr@edith.ai": {"password": "hr123", "role": "hr", "name": "HR Manager"},
+        "daksh@edith.ai": {"password": "admin123", "role": "admin", "name": "Daksh"},
+        "kanav@edith.ai": {"password": "edith123", "role": "employee", "name": "Kanav"},
+        "somya@edith.ai": {"password": "edith123", "role": "hr", "name": "Somya"},
     }
 
 def save_users(users: dict):
