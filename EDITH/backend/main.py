@@ -4,6 +4,10 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 load_dotenv(PROJECT_ROOT / ".env")
 
+# Validate configuration immediately
+from backend.config import validate_environment
+validate_environment()
+
 from fastapi import FastAPI, HTTPException, Depends
 from pydantic import BaseModel
 from typing import Optional
@@ -16,17 +20,27 @@ from backend.auth import (
     LoginRequest, LoginResponse, load_users, save_users
 )
 import os
+import json
 
 app = FastAPI(title="EDITH Backend")
 
 # Enable CORS for frontend
 from fastapi.middleware.cors import CORSMiddleware
+
+# Get allowed origins from environment, default to localhost for development
+ALLOWED_ORIGINS = os.environ.get(
+    "ALLOWED_ORIGINS", 
+    "http://localhost:5173,http://127.0.0.1:5173"
+).split(",")
+ALLOW_LOCALHOST_CORS = os.environ.get("ALLOW_LOCALHOST_CORS", "true").lower() == "true"
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=ALLOWED_ORIGINS,
+    allow_origin_regex=r"http://(localhost|127\.0\.0\.1):\d+" if ALLOW_LOCALHOST_CORS else None,
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allow_headers=["Authorization", "Content-Type"],
 )
 
 # ==================== AUTH ENDPOINTS ====================
@@ -147,10 +161,9 @@ def read_root():
 @app.get("/status")
 def get_status():
     """Check if data has been ingested."""
-    from backend.vector_store import get_collection
+    from backend.vector_store import get_collection_count
     try:
-        collection = get_collection()
-        count = collection.count()
+        count = get_collection_count()
         return {"ingested": count > 0, "chunks_count": count}
     except:
         return {"ingested": False, "chunks_count": 0}
@@ -164,12 +177,11 @@ class IngestRequest(BaseModel):
 def ingest_repo(request: IngestRequest, user: dict = Depends(require_role(Role.ADMIN))):
     """Admin only: Ingest a repository."""
     try:
-        from backend.vector_store import get_collection, add_documents
+        from backend.vector_store import get_collection_count, get_collection, add_documents
         
         if not request.force:
             try:
-                collection = get_collection()
-                existing_count = collection.count()
+                existing_count = get_collection_count()
                 if existing_count > 0:
                     return {
                         "status": "skipped",
@@ -344,6 +356,72 @@ from backend.hr_reasoning import answer_unified_question
 
 class AdminAskRequest(BaseModel):
     question: str
+
+
+class BootstrapHRDataRequest(BaseModel):
+    users: dict
+    leaves: dict
+    performance: dict
+    onboarding: dict
+    hr_docs: dict
+
+
+def _write_json(path: str, data: dict):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+@app.post("/admin/bootstrap-hr-data")
+def bootstrap_hr_data(payload: BootstrapHRDataRequest, user: dict = Depends(require_role(Role.ADMIN))):
+    """Admin only: Bulk-load HR datasets into backend storage."""
+    users_path = os.path.join(DATA_DIR, "users.json")
+    leaves_path = os.path.join(DATA_DIR, "leaves.json")
+    performance_path = os.path.join(DATA_DIR, "performance.json")
+    onboarding_path = os.path.join(DATA_DIR, "onboarding.json")
+    hr_docs_path = os.path.join(DATA_DIR, "hr_docs.json")
+    assignments_path = os.path.join(DATA_DIR, "repo_assignments.json")
+
+    # Build assignment map from users[].assigned_repos for employee access control.
+    assignments = {}
+    for email, user_data in payload.users.items():
+        repos = user_data.get("assigned_repos", []) if isinstance(user_data, dict) else []
+        if isinstance(repos, list) and repos:
+            assignments[email] = repos
+
+    _write_json(users_path, payload.users)
+    _write_json(leaves_path, payload.leaves)
+    _write_json(performance_path, payload.performance)
+    _write_json(onboarding_path, payload.onboarding)
+    _write_json(hr_docs_path, payload.hr_docs)
+    _write_json(assignments_path, assignments)
+
+    # Refresh in-memory HR docs cache immediately.
+    try:
+        import backend.hr_context as hr_context
+
+        docs = payload.hr_docs.get("docs", []) if isinstance(payload.hr_docs, dict) else []
+        hr_context._hr_memory["docs"] = docs  # noqa: SLF001
+        max_id = 0
+        for d in docs:
+            if isinstance(d, dict):
+                doc_id = d.get("id")
+                if isinstance(doc_id, int) and doc_id > max_id:
+                    max_id = doc_id
+        hr_context._next_id = max_id + 1  # noqa: SLF001
+    except Exception:
+        # Data is already persisted; cache refresh failure is non-fatal.
+        pass
+
+    return {
+        "status": "success",
+        "users_count": len(payload.users),
+        "leave_requests_count": len(payload.leaves.get("requests", [])),
+        "performance_profiles_count": len(payload.performance),
+        "onboarding_profiles_count": len(payload.onboarding),
+        "hr_docs_count": len(payload.hr_docs.get("docs", [])) if isinstance(payload.hr_docs, dict) else 0,
+        "assignments_count": len(assignments),
+    }
 
 @app.post("/admin/ask")
 def admin_ask(request: AdminAskRequest, user: dict = Depends(get_current_user)):
