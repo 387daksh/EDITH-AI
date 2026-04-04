@@ -142,7 +142,7 @@ const InnovationView: React.FC = () => {
                     </div>
 
                     <div className="flex-1 w-full h-full rounded-[20px] overflow-hidden bg-black/20 border border-white/5">
-                        <ResponsiveContainer width="100%" height="100%">
+                        <ResponsiveContainer width="100%" height="100%" minWidth={0} minHeight={320}>
                             <ScatterChart margin={{ top: 60, right: 30, bottom: 30, left: 30 }}>
                                 <defs>
                                     <linearGradient id="gridGradient" x1="0" y1="0" x2="0" y2="1">

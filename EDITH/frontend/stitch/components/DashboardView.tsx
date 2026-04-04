@@ -142,7 +142,7 @@ const DashboardView: React.FC = () => {
             <span className="text-emerald-600 bg-emerald-50 text-xs font-bold px-2 py-1 rounded-full">This Week</span>
           </div>
           <div className="flex-1 min-h-[200px] h-[200px]">
-            <ResponsiveContainer width="100%" height="100%">
+            <ResponsiveContainer width="100%" height="100%" minWidth={0} minHeight={200}>
               <BarChart data={commitData} margin={{ top: 10, bottom: 0, left: 0, right: 0 }}>
                 <XAxis 
                   dataKey="name" 

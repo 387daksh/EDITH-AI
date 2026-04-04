@@ -77,7 +77,7 @@ const PerformanceView: React.FC = () => {
             </div>
 
             <div className="h-[250px] flex items-center justify-center">
-              <ResponsiveContainer width="100%" height="100%">
+              <ResponsiveContainer width="100%" height="100%" minWidth={0} minHeight={220}>
                 <RadarChart data={data.skills}>
                   <PolarGrid stroke="#f1f5f9" />
                   <PolarAngleAxis dataKey="subject" tick={{ fill: '#94a3b8', fontSize: 10, fontWeight: 800 }} />
@@ -103,7 +103,7 @@ const PerformanceView: React.FC = () => {
           </div>
           
           <div className="flex-1 min-h-[220px]">
-            <ResponsiveContainer width="100%" height="100%">
+            <ResponsiveContainer width="100%" height="100%" minWidth={0} minHeight={220}>
               <BarChart data={activityData} margin={{ top: 20, bottom: 0, left: 0, right: 0 }}>
                 <XAxis 
                   dataKey="name" 

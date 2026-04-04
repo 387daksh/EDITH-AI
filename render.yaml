@@ -12,3 +12,11 @@ services:
         sync: false
       - key: JWT_SECRET
         generateValue: true
+      - key: ALLOWED_ORIGINS
+        value: "http://localhost:5173,http://127.0.0.1:5173,https://edith-ai-six.vercel.app"
+      - key: ALLOW_VERCEL_PREVIEW_CORS
+        value: "true"
+      - key: INGEST_MAX_FILES
+        value: "180"
+      - key: INGEST_MAX_CHUNKS
+        value: "2200"

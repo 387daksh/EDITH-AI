@@ -33,17 +33,30 @@ app = FastAPI(title="EDITH Backend")
 # Enable CORS for frontend
 from fastapi.middleware.cors import CORSMiddleware
 
-# Get allowed origins from environment, default to localhost for development
-ALLOWED_ORIGINS = os.environ.get(
-    "ALLOWED_ORIGINS", 
-    "http://localhost:5173,http://127.0.0.1:5173"
-).split(",")
+# Get allowed origins from environment, default to localhost + production frontend.
+ALLOWED_ORIGINS = [
+    origin.strip()
+    for origin in os.environ.get(
+        "ALLOWED_ORIGINS",
+        "http://localhost:5173,http://127.0.0.1:5173,https://edith-ai-six.vercel.app"
+    ).split(",")
+    if origin.strip()
+]
 ALLOW_LOCALHOST_CORS = os.environ.get("ALLOW_LOCALHOST_CORS", "true").lower() == "true"
+ALLOW_VERCEL_PREVIEW_CORS = os.environ.get("ALLOW_VERCEL_PREVIEW_CORS", "true").lower() == "true"
+
+origin_regex_parts = []
+if ALLOW_LOCALHOST_CORS:
+    origin_regex_parts.append(r"http://(localhost|127\.0\.0\.1):\d+")
+if ALLOW_VERCEL_PREVIEW_CORS:
+    origin_regex_parts.append(r"https://[a-zA-Z0-9-]+\.vercel\.app")
+
+origin_regex = "|".join(origin_regex_parts) if origin_regex_parts else None
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=ALLOWED_ORIGINS,
-    allow_origin_regex=r"http://(localhost|127\.0\.0\.1):\d+" if ALLOW_LOCALHOST_CORS else None,
+    allow_origin_regex=origin_regex,
     allow_credentials=True,
     allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allow_headers=["Authorization", "Content-Type"],

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* EDITH Stitch - Main Styles */
 
 /* Scrollbar hiding utility */
@@ -26,9 +30,28 @@ button:focus {
 
 /* Better text rendering */
 body {
+  font-family: "Inter", sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e2e8f0;
+  border-radius: 10px;
 }
 
 /* Message content styling */
@@ -50,4 +73,15 @@ code {
 pre {
   padding: 1rem;
   overflow-x: auto;
+}
+
+.graph-connection {
+  stroke-dasharray: 8;
+  animation: dashMove 20s linear infinite;
+}
+
+@keyframes dashMove {
+  to {
+    stroke-dashoffset: -200;
+  }
 }
