@@ -1,0 +1,682 @@
+{
+  "daksh@edith.ai": {
+    "overall_score": 92.0,
+    "trend": 0.5,
+    "skills": [
+      {
+        "subject": "Strategy",
+        "A": 91
+      },
+      {
+        "subject": "Leadership",
+        "A": 95
+      },
+      {
+        "subject": "Vision",
+        "A": 86
+      },
+      {
+        "subject": "Execution",
+        "A": 91
+      },
+      {
+        "subject": "Communication",
+        "A": 97
+      },
+      {
+        "subject": "Innovation",
+        "A": 93
+      }
+    ],
+    "metrics": [
+      {
+        "label": "Impact",
+        "val": 83
+      },
+      {
+        "label": "Collaboration",
+        "val": 74
+      },
+      {
+        "label": "Efficiency",
+        "val": 73
+      },
+      {
+        "label": "Growth",
+        "val": 68
+      }
+    ],
+    "assessments": [
+      {
+        "name": "Q1 Review",
+        "date": "2024-03-15",
+        "status": "Completed",
+        "score": "92/100"
+      },
+      {
+        "name": "Security Training",
+        "date": "2024-01-20",
+        "status": "Passed",
+        "score": "100/100"
+      },
+      {
+        "name": "Q2 Goals",
+        "date": "In Progress",
+        "status": "Active",
+        "score": "--/100"
+      }
+    ]
+  },
+  "ayush@edith.ai": {
+    "overall_score": 95.4,
+    "trend": 0.8,
+    "skills": [
+      {
+        "subject": "Strategy",
+        "A": 99
+      },
+      {
+        "subject": "Leadership",
+        "A": 93
+      },
+      {
+        "subject": "Vision",
+        "A": 86
+      },
+      {
+        "subject": "Execution",
+        "A": 91
+      },
+      {
+        "subject": "Communication",
+        "A": 93
+      },
+      {
+        "subject": "Innovation",
+        "A": 85
+      }
+    ],
+    "metrics": [
+      {
+        "label": "Impact",
+        "val": 88
+      },
+      {
+        "label": "Collaboration",
+        "val": 87
+      },
+      {
+        "label": "Efficiency",
+        "val": 83
+      },
+      {
+        "label": "Growth",
+        "val": 99
+      }
+    ],
+    "assessments": [
+      {
+        "name": "Q1 Review",
+        "date": "2024-03-15",
+        "status": "Completed",
+        "score": "94/100"
+      },
+      {
+        "name": "Security Training",
+        "date": "2024-01-20",
+        "status": "Passed",
+        "score": "100/100"
+      },
+      {
+        "name": "Q2 Goals",
+        "date": "In Progress",
+        "status": "Active",
+        "score": "--/100"
+      }
+    ]
+  },
+  "somya@edith.ai": {
+    "overall_score": 93.2,
+    "trend": -0.4,
+    "skills": [
+      {
+        "subject": "Management",
+        "A": 88
+      },
+      {
+        "subject": "Planning",
+        "A": 88
+      },
+      {
+        "subject": "Hiring",
+        "A": 79
+      },
+      {
+        "subject": "Delivery",
+        "A": 87
+      },
+      {
+        "subject": "Mentorship",
+        "A": 84
+      },
+      {
+        "subject": "Technical",
+        "A": 77
+      }
+    ],
+    "metrics": [
+      {
+        "label": "Impact",
+        "val": 74
+      },
+      {
+        "label": "Collaboration",
+        "val": 78
+      },
+      {
+        "label": "Efficiency",
+        "val": 73
+      },
+      {
+        "label": "Growth",
+        "val": 72
+      }
+    ],
+    "assessments": [
+      {
+        "name": "Q1 Review",
+        "date": "2024-03-15",
+        "status": "Completed",
+        "score": "91/100"
+      },
+      {
+        "name": "Security Training",
+        "date": "2024-01-20",
+        "status": "Passed",
+        "score": "100/100"
+      },
+      {
+        "name": "Q2 Goals",
+        "date": "In Progress",
+        "status": "Active",
+        "score": "--/100"
+      }
+    ]
+  },
+  "syna@edith.ai": {
+    "overall_score": 94.5,
+    "trend": -0.2,
+    "skills": [
+      {
+        "subject": "Management",
+        "A": 89
+      },
+      {
+        "subject": "Planning",
+        "A": 86
+      },
+      {
+        "subject": "Hiring",
+        "A": 80
+      },
+      {
+        "subject": "Delivery",
+        "A": 86
+      },
+      {
+        "subject": "Mentorship",
+        "A": 85
+      },
+      {
+        "subject": "Technical",
+        "A": 86
+      }
+    ],
+    "metrics": [
+      {
+        "label": "Impact",
+        "val": 85
+      },
+      {
+        "label": "Collaboration",
+        "val": 91
+      },
+      {
+        "label": "Efficiency",
+        "val": 72
+      },
+      {
+        "label": "Growth",
+        "val": 68
+      }
+    ],
+    "assessments": [
+      {
+        "name": "Q1 Review",
+        "date": "2024-03-15",
+        "status": "Completed",
+        "score": "90/100"
+      },
+      {
+        "name": "Security Training",
+        "date": "2024-01-20",
+        "status": "Passed",
+        "score": "100/100"
+      },
+      {
+        "name": "Q2 Goals",
+        "date": "In Progress",
+        "status": "Active",
+        "score": "--/100"
+      }
+    ]
+  },
+  "dhruv@edith.ai": {
+    "overall_score": 91.3,
+    "trend": -0.7,
+    "skills": [
+      {
+        "subject": "Coding",
+        "A": 82
+      },
+      {
+        "subject": "System Design",
+        "A": 90
+      },
+      {
+        "subject": "Debugging",
+        "A": 98
+      },
+      {
+        "subject": "Collaboration",
+        "A": 76
+      },
+      {
+        "subject": "Speed",
+        "A": 82
+      },
+      {
+        "subject": "Testing",
+        "A": 69
+      }
+    ],
+    "metrics": [
+      {
+        "label": "Impact",
+        "val": 72
+      },
+      {
+        "label": "Collaboration",
+        "val": 84
+      },
+      {
+        "label": "Efficiency",
+        "val": 79
+      },
+      {
+        "label": "Growth",
+        "val": 78
+      }
+    ],
+    "assessments": [
+      {
+        "name": "Q1 Review",
+        "date": "2024-03-15",
+        "status": "Completed",
+        "score": "94/100"
+      },
+      {
+        "name": "Security Training",
+        "date": "2024-01-20",
+        "status": "Passed",
+        "score": "100/100"
+      },
+      {
+        "name": "Q2 Goals",
+        "date": "In Progress",
+        "status": "Active",
+        "score": "--/100"
+      }
+    ]
+  },
+  "kanav@edith.ai": {
+    "overall_score": 80.9,
+    "trend": 2.8,
+    "skills": [
+      {
+        "subject": "Coding",
+        "A": 88
+      },
+      {
+        "subject": "System Design",
+        "A": 87
+      },
+      {
+        "subject": "Debugging",
+        "A": 98
+      },
+      {
+        "subject": "Collaboration",
+        "A": 82
+      },
+      {
+        "subject": "Speed",
+        "A": 92
+      },
+      {
+        "subject": "Testing",
+        "A": 70
+      }
+    ],
+    "metrics": [
+      {
+        "label": "Impact",
+        "val": 79
+      },
+      {
+        "label": "Collaboration",
+        "val": 91
+      },
+      {
+        "label": "Efficiency",
+        "val": 71
+      },
+      {
+        "label": "Growth",
+        "val": 74
+      }
+    ],
+    "assessments": [
+      {
+        "name": "Q1 Review",
+        "date": "2024-03-15",
+        "status": "Completed",
+        "score": "97/100"
+      },
+      {
+        "name": "Security Training",
+        "date": "2024-01-20",
+        "status": "Passed",
+        "score": "100/100"
+      },
+      {
+        "name": "Q2 Goals",
+        "date": "In Progress",
+        "status": "Active",
+        "score": "--/100"
+      }
+    ]
+  },
+  "himank@edith.ai": {
+    "overall_score": 87.6,
+    "trend": 0.4,
+    "skills": [
+      {
+        "subject": "Coding",
+        "A": 98
+      },
+      {
+        "subject": "System Design",
+        "A": 83
+      },
+      {
+        "subject": "Debugging",
+        "A": 90
+      },
+      {
+        "subject": "Collaboration",
+        "A": 81
+      },
+      {
+        "subject": "Speed",
+        "A": 80
+      },
+      {
+        "subject": "Testing",
+        "A": 90
+      }
+    ],
+    "metrics": [
+      {
+        "label": "Impact",
+        "val": 72
+      },
+      {
+        "label": "Collaboration",
+        "val": 73
+      },
+      {
+        "label": "Efficiency",
+        "val": 95
+      },
+      {
+        "label": "Growth",
+        "val": 74
+      }
+    ],
+    "assessments": [
+      {
+        "name": "Q1 Review",
+        "date": "2024-03-15",
+        "status": "Completed",
+        "score": "86/100"
+      },
+      {
+        "name": "Security Training",
+        "date": "2024-01-20",
+        "status": "Passed",
+        "score": "100/100"
+      },
+      {
+        "name": "Q2 Goals",
+        "date": "In Progress",
+        "status": "Active",
+        "score": "--/100"
+      }
+    ]
+  },
+  "jai@edith.ai": {
+    "overall_score": 86.0,
+    "trend": -0.9,
+    "skills": [
+      {
+        "subject": "Coding",
+        "A": 96
+      },
+      {
+        "subject": "System Design",
+        "A": 71
+      },
+      {
+        "subject": "Debugging",
+        "A": 94
+      },
+      {
+        "subject": "Collaboration",
+        "A": 86
+      },
+      {
+        "subject": "Speed",
+        "A": 89
+      },
+      {
+        "subject": "Testing",
+        "A": 90
+      }
+    ],
+    "metrics": [
+      {
+        "label": "Impact",
+        "val": 75
+      },
+      {
+        "label": "Collaboration",
+        "val": 86
+      },
+      {
+        "label": "Efficiency",
+        "val": 77
+      },
+      {
+        "label": "Growth",
+        "val": 61
+      }
+    ],
+    "assessments": [
+      {
+        "name": "Q1 Review",
+        "date": "2024-03-15",
+        "status": "Completed",
+        "score": "95/100"
+      },
+      {
+        "name": "Security Training",
+        "date": "2024-01-20",
+        "status": "Passed",
+        "score": "100/100"
+      },
+      {
+        "name": "Q2 Goals",
+        "date": "In Progress",
+        "status": "Active",
+        "score": "--/100"
+      }
+    ]
+  },
+  "soham@edith.ai": {
+    "overall_score": 91.9,
+    "trend": -0.4,
+    "skills": [
+      {
+        "subject": "Management",
+        "A": 90
+      },
+      {
+        "subject": "Planning",
+        "A": 84
+      },
+      {
+        "subject": "Hiring",
+        "A": 89
+      },
+      {
+        "subject": "Delivery",
+        "A": 92
+      },
+      {
+        "subject": "Mentorship",
+        "A": 82
+      },
+      {
+        "subject": "Technical",
+        "A": 84
+      }
+    ],
+    "metrics": [
+      {
+        "label": "Impact",
+        "val": 98
+      },
+      {
+        "label": "Collaboration",
+        "val": 95
+      },
+      {
+        "label": "Efficiency",
+        "val": 82
+      },
+      {
+        "label": "Growth",
+        "val": 82
+      }
+    ],
+    "assessments": [
+      {
+        "name": "Q1 Review",
+        "date": "2024-03-15",
+        "status": "Completed",
+        "score": "95/100"
+      },
+      {
+        "name": "Security Training",
+        "date": "2024-01-20",
+        "status": "Passed",
+        "score": "100/100"
+      },
+      {
+        "name": "Q2 Goals",
+        "date": "In Progress",
+        "status": "Active",
+        "score": "--/100"
+      }
+    ]
+  },
+  "kritika@edith.ai": {
+    "overall_score": 92.3,
+    "trend": 3.0,
+    "skills": [
+      {
+        "subject": "Coding",
+        "A": 96
+      },
+      {
+        "subject": "System Design",
+        "A": 81
+      },
+      {
+        "subject": "Debugging",
+        "A": 97
+      },
+      {
+        "subject": "Collaboration",
+        "A": 80
+      },
+      {
+        "subject": "Speed",
+        "A": 72
+      },
+      {
+        "subject": "Testing",
+        "A": 89
+      }
+    ],
+    "metrics": [
+      {
+        "label": "Impact",
+        "val": 72
+      },
+      {
+        "label": "Collaboration",
+        "val": 82
+      },
+      {
+        "label": "Efficiency",
+        "val": 79
+      },
+      {
+        "label": "Growth",
+        "val": 95
+      }
+    ],
+    "assessments": [
+      {
+        "name": "Q1 Review",
+        "date": "2024-03-15",
+        "status": "Completed",
+        "score": "96/100"
+      },
+      {
+        "name": "Security Training",
+        "date": "2024-01-20",
+        "status": "Passed",
+        "score": "100/100"
+      },
+      {
+        "name": "Q2 Goals",
+        "date": "In Progress",
+        "status": "Active",
+        "score": "--/100"
+      }
+    ]
+  }
+}

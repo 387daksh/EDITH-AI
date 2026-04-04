@@ -1,0 +1,382 @@
+{
+  "daksh@edith.ai": [
+    {
+      "id": 1,
+      "title": "Sign Employment Contract",
+      "category": "Legal",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "title": "Setup Company Email",
+      "category": "IT",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "title": "Join Slack Channels",
+      "category": "IT",
+      "completed": true
+    },
+    {
+      "id": 4,
+      "title": "Meet the Team",
+      "category": "Social",
+      "completed": true
+    },
+    {
+      "id": 5,
+      "title": "Setup Payroll Info",
+      "category": "Finance",
+      "completed": true
+    },
+    {
+      "id": 6,
+      "title": "Read Employee Handbook",
+      "category": "Compliance",
+      "completed": true
+    }
+  ],
+  "ayush@edith.ai": [
+    {
+      "id": 1,
+      "title": "Sign Employment Contract",
+      "category": "Legal",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "title": "Setup Company Email",
+      "category": "IT",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "title": "Join Slack Channels",
+      "category": "IT",
+      "completed": true
+    },
+    {
+      "id": 4,
+      "title": "Meet the Team",
+      "category": "Social",
+      "completed": true
+    },
+    {
+      "id": 5,
+      "title": "Setup Payroll Info",
+      "category": "Finance",
+      "completed": true
+    },
+    {
+      "id": 6,
+      "title": "Read Employee Handbook",
+      "category": "Compliance",
+      "completed": true
+    }
+  ],
+  "somya@edith.ai": [
+    {
+      "id": 1,
+      "title": "Sign Employment Contract",
+      "category": "Legal",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "title": "Setup Company Email",
+      "category": "IT",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "title": "Join Slack Channels",
+      "category": "IT",
+      "completed": true
+    },
+    {
+      "id": 4,
+      "title": "Meet the Team",
+      "category": "Social",
+      "completed": true
+    },
+    {
+      "id": 5,
+      "title": "Setup Payroll Info",
+      "category": "Finance",
+      "completed": true
+    },
+    {
+      "id": 6,
+      "title": "Read Employee Handbook",
+      "category": "Compliance",
+      "completed": true
+    }
+  ],
+  "syna@edith.ai": [
+    {
+      "id": 1,
+      "title": "Sign Employment Contract",
+      "category": "Legal",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "title": "Setup Company Email",
+      "category": "IT",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "title": "Join Slack Channels",
+      "category": "IT",
+      "completed": true
+    },
+    {
+      "id": 4,
+      "title": "Meet the Team",
+      "category": "Social",
+      "completed": true
+    },
+    {
+      "id": 5,
+      "title": "Setup Payroll Info",
+      "category": "Finance",
+      "completed": true
+    },
+    {
+      "id": 6,
+      "title": "Read Employee Handbook",
+      "category": "Compliance",
+      "completed": true
+    }
+  ],
+  "dhruv@edith.ai": [
+    {
+      "id": 1,
+      "title": "Sign Employment Contract",
+      "category": "Legal",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "title": "Setup Company Email",
+      "category": "IT",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "title": "Join Slack Channels",
+      "category": "IT",
+      "completed": true
+    },
+    {
+      "id": 4,
+      "title": "Meet the Team",
+      "category": "Social",
+      "completed": true
+    },
+    {
+      "id": 5,
+      "title": "Setup Payroll Info",
+      "category": "Finance",
+      "completed": true
+    },
+    {
+      "id": 6,
+      "title": "Read Employee Handbook",
+      "category": "Compliance",
+      "completed": true
+    }
+  ],
+  "kanav@edith.ai": [
+    {
+      "id": 1,
+      "title": "Sign Employment Contract",
+      "category": "Legal",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "title": "Setup Company Email",
+      "category": "IT",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "title": "Join Slack Channels",
+      "category": "IT",
+      "completed": true
+    },
+    {
+      "id": 4,
+      "title": "Meet the Team",
+      "category": "Social",
+      "completed": true
+    },
+    {
+      "id": 5,
+      "title": "Setup Payroll Info",
+      "category": "Finance",
+      "completed": true
+    },
+    {
+      "id": 6,
+      "title": "Read Employee Handbook",
+      "category": "Compliance",
+      "completed": true
+    }
+  ],
+  "himank@edith.ai": [
+    {
+      "id": 1,
+      "title": "Sign Employment Contract",
+      "category": "Legal",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "title": "Setup Company Email",
+      "category": "IT",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "title": "Join Slack Channels",
+      "category": "IT",
+      "completed": true
+    },
+    {
+      "id": 4,
+      "title": "Meet the Team",
+      "category": "Social",
+      "completed": true
+    },
+    {
+      "id": 5,
+      "title": "Setup Payroll Info",
+      "category": "Finance",
+      "completed": false
+    },
+    {
+      "id": 6,
+      "title": "Read Employee Handbook",
+      "category": "Compliance",
+      "completed": false
+    }
+  ],
+  "jai@edith.ai": [
+    {
+      "id": 1,
+      "title": "Sign Employment Contract",
+      "category": "Legal",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "title": "Setup Company Email",
+      "category": "IT",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "title": "Join Slack Channels",
+      "category": "IT",
+      "completed": true
+    },
+    {
+      "id": 4,
+      "title": "Meet the Team",
+      "category": "Social",
+      "completed": true
+    },
+    {
+      "id": 5,
+      "title": "Setup Payroll Info",
+      "category": "Finance",
+      "completed": false
+    },
+    {
+      "id": 6,
+      "title": "Read Employee Handbook",
+      "category": "Compliance",
+      "completed": false
+    }
+  ],
+  "soham@edith.ai": [
+    {
+      "id": 1,
+      "title": "Sign Employment Contract",
+      "category": "Legal",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "title": "Setup Company Email",
+      "category": "IT",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "title": "Join Slack Channels",
+      "category": "IT",
+      "completed": true
+    },
+    {
+      "id": 4,
+      "title": "Meet the Team",
+      "category": "Social",
+      "completed": true
+    },
+    {
+      "id": 5,
+      "title": "Setup Payroll Info",
+      "category": "Finance",
+      "completed": true
+    },
+    {
+      "id": 6,
+      "title": "Read Employee Handbook",
+      "category": "Compliance",
+      "completed": true
+    }
+  ],
+  "kritika@edith.ai": [
+    {
+      "id": 1,
+      "title": "Sign Employment Contract",
+      "category": "Legal",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "title": "Setup Company Email",
+      "category": "IT",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "title": "Join Slack Channels",
+      "category": "IT",
+      "completed": true
+    },
+    {
+      "id": 4,
+      "title": "Meet the Team",
+      "category": "Social",
+      "completed": true
+    },
+    {
+      "id": 5,
+      "title": "Setup Payroll Info",
+      "category": "Finance",
+      "completed": false
+    },
+    {
+      "id": 6,
+      "title": "Read Employee Handbook",
+      "category": "Compliance",
+      "completed": false
+    }
+  ]
+}

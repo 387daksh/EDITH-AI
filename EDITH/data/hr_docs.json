@@ -1,0 +1,24 @@
+{
+  "docs": [
+    {
+      "id": 1,
+      "title": "2026 Remote Work & Hybrid Policy",
+      "content": "All employees are eligible for hybrid work after their probation period (3 months). The standard hybrid model requires 3 days in the office (Tuesday, Wednesday, and Thursday) and allows 2 days remote (Monday and Friday). \n\nCore working hours are 10:00 AM to 4:00 PM local time. Employees must be available on Slack and Zoom during these hours.\n\nEquipment: The company provides a MacBook Pro, one external monitor, and a one-time home office stipend of $500. Internet costs are not reimbursed unless the role is fully remote.\n\nFully remote roles require approval from the Department Head and HR Director."
+    },
+    {
+      "id": 2,
+      "title": "Travel & Expense Guidelines",
+      "content": "Employees traveling for business are entitled to reimbursement for reasonable expenses. \n\n- Meals: Daily allowance is $75 per day (receipts required for purchases over $25).\n- Flights: Economy class for domestic flights. Premium Economy is allowed for international flights over 8 hours.\n- Hotels: Standard room rate up to $250/night in major cities (NY, SF, London) and $180/night elsewhere.\n- Rideshare: Uber/Lyft is covered for travel between airport/hotel/office.\n\nExpense claims must be submitted via the finance portal within 30 days of the expense date. Approval is required from your direct manager."
+    },
+    {
+      "id": 3,
+      "title": "Annual Leave & Holidays 2026",
+      "content": "Annual Leave:\n- Full-time employees receive 20 days of paid annual leave per calendar year.\n- Unused leave can roll over (max 5 days) to the first quarter of the next year.\n- Leave requests longer than 2 weeks require 1 month's notice.\n\nSick Leave:\n- 10 days of paid sick leave per year. A doctor's note is required for absences of 3 or more consecutive days.\n\nPublic Holidays:\nWe observe all federal holidays. If a holiday falls on a weekend, the following Monday will be observed as a day off."
+    },
+    {
+      "id": 4,
+      "title": "Parental Leave Benefits",
+      "content": "Maternity Leave:\nBiological mothers are eligible for 16 weeks of fully paid leave. An additional 8 weeks of unpaid leave can be taken.\n\nPaternity/Partner Leave:\nPartners are eligible for 6 weeks of fully paid leave to bond with the new child.\n\nEligibility:\nEmployees must have been with EDITH for at least 12 months prior to the child's birth or adoption date to qualify for full paid benefits."
+    }
+  ]
+}

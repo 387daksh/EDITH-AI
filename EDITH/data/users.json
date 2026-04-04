@@ -1,0 +1,90 @@
+{
+  "daksh@edith.ai": {
+    "password": "admin123",
+    "role": "admin",
+    "name": "Daksh",
+    "title": "Chief Executive Officer",
+    "department": "Executive",
+    "manager_email": null
+  },
+  "ayush@edith.ai": {
+    "password": "edith123",
+    "role": "admin",
+    "name": "Ayush",
+    "title": "Chief Technology Officer",
+    "department": "Engineering",
+    "manager_email": "daksh@edith.ai"
+  },
+  "somya@edith.ai": {
+    "password": "edith123",
+    "role": "hr",
+    "name": "Somya",
+    "title": "Head of HR",
+    "department": "People",
+    "manager_email": "daksh@edith.ai",
+    "assigned_repos": ["https://github.com/psf/requests"]
+  },
+  "syna@edith.ai": {
+    "password": "edith123",
+    "role": "employee",
+    "name": "Syna",
+    "title": "Head of Product",
+    "department": "Product",
+    "manager_email": "daksh@edith.ai",
+    "assigned_repos": ["https://github.com/psf/requests"]
+  },
+  "dhruv@edith.ai": {
+    "password": "edith123",
+    "role": "employee",
+    "name": "Dhruv",
+    "title": "Lead Engineer",
+    "department": "Engineering",
+    "manager_email": "ayush@edith.ai",
+    "assigned_repos": ["https://github.com/psf/requests"]
+  },
+  "kanav@edith.ai": {
+    "password": "edith123",
+    "role": "employee",
+    "name": "Kanav",
+    "title": "Backend Developer",
+    "department": "Engineering",
+    "manager_email": "dhruv@edith.ai",
+    "assigned_repos": ["https://github.com/psf/requests"]
+  },
+  "himank@edith.ai": {
+    "password": "edith123",
+    "role": "employee",
+    "name": "Himank",
+    "title": "Frontend Developer",
+    "department": "Engineering",
+    "manager_email": "dhruv@edith.ai",
+    "assigned_repos": ["https://github.com/psf/requests"]
+  },
+  "jai@edith.ai": {
+    "password": "edith123",
+    "role": "employee",
+    "name": "Jai",
+    "title": "DevOps Engineer",
+    "department": "Engineering",
+    "manager_email": "dhruv@edith.ai",
+    "assigned_repos": ["https://github.com/psf/requests"]
+  },
+  "soham@edith.ai": {
+    "password": "edith123",
+    "role": "employee",
+    "name": "Soham",
+    "title": "Product Manager",
+    "department": "Product",
+    "manager_email": "syna@edith.ai",
+    "assigned_repos": ["https://github.com/psf/requests"]
+  },
+  "kritika@edith.ai": {
+    "password": "edith123",
+    "role": "employee",
+    "name": "Kritika",
+    "title": "Lead Designer",
+    "department": "Product",
+    "manager_email": "syna@edith.ai",
+    "assigned_repos": ["https://github.com/psf/requests"]
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "balances": {
+    "daksh@edith.ai": {
+      "annual": 18,
+      "sick": 7,
+      "casual": 3
+    },
+    "ayush@edith.ai": {
+      "annual": 25,
+      "sick": 8,
+      "casual": 4
+    },
+    "somya@edith.ai": {
+      "annual": 22,
+      "sick": 10,
+      "casual": 3
+    },
+    "syna@edith.ai": {
+      "annual": 24,
+      "sick": 6,
+      "casual": 5
+    },
+    "dhruv@edith.ai": {
+      "annual": 22,
+      "sick": 7,
+      "casual": 5
+    },
+    "kanav@edith.ai": {
+      "annual": 18,
+      "sick": 4,
+      "casual": 2
+    },
+    "himank@edith.ai": {
+      "annual": 16,
+      "sick": 5,
+      "casual": 4
+    },
+    "jai@edith.ai": {
+      "annual": 23,
+      "sick": 6,
+      "casual": 4
+    },
+    "soham@edith.ai": {
+      "annual": 10,
+      "sick": 8,
+      "casual": 2
+    },
+    "kritika@edith.ai": {
+      "annual": 12,
+      "sick": 9,
+      "casual": 2
+    }
+  },
+  "requests": [
+    {
+      "id": 5,
+      "email": "daksh@edith.ai",
+      "type": "annual",
+      "start_date": "2026-04-02",
+      "end_date": "2026-04-09",
+      "reason": "",
+      "status": "Pending",
+      "applied_on": "2026-04-02"
+    },
+    {
+      "id": 5,
+      "email": "daksh@edith.ai",
+      "type": "annual",
+      "start_date": "2026-04-02",
+      "end_date": "2026-04-09",
+      "reason": "",
+      "status": "Pending",
+      "applied_on": "2026-04-02"
+    },
+    {
+      "id": 3,
+      "email": "somya@edith.ai",
+      "type": "annual",
+      "start_date": "2026-02-10",
+      "end_date": "2026-02-13",
+      "reason": "",
+      "status": "Approved",
+      "applied_on": "2026-02-08"
+    },
+    {
+      "id": 3,
+      "email": "somya@edith.ai",
+      "type": "annual",
+      "start_date": "2026-02-10",
+      "end_date": "2026-02-13",
+      "reason": "",
+      "status": "Pending",
+      "applied_on": "2026-02-08"
+    },
+    {
+      "id": 1,
+      "email": "kanav@edith.ai",
+      "type": "sick",
+      "start_date": "2026-02-09",
+      "end_date": "2026-02-12",
+      "reason": "",
+      "status": "Approved",
+      "applied_on": "2026-02-08"
+    },
+    {
+      "id": 1,
+      "email": "kanav@edith.ai",
+      "type": "sick",
+      "start_date": "2026-02-09",
+      "end_date": "2026-02-12",
+      "reason": "",
+      "status": "Pending",
+      "applied_on": "2026-02-08"
+    }
+  ]
+}

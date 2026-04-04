@@ -5,7 +5,17 @@ venv/
 .env
 
 # Data
-data/
+data/*
+!data/users.json
+!data/leaves.json
+!data/performance.json
+!data/onboarding.json
+!data/hr_docs.json
+!data/dependency_graph.gml
+
+data/chroma_db/
+data/repos/
+data/diagram_cache/
 
 # IDE
 .vscode/
