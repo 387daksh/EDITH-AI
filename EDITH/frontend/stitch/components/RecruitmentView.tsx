@@ -79,7 +79,13 @@ const RecruitmentView: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
         {/* LEFT COLUMN: Input Control Panel */}
-        <div className={`lg:col-span-${isAnalyzed ? '4' : '12 max-w-4xl mx-auto w-full'} space-y-6 transition-all duration-500 ease-in-out`}>
+        <div
+          className={
+            isAnalyzed
+              ? 'lg:col-span-4 space-y-6 transition-all duration-500 ease-in-out'
+              : 'lg:col-span-12 max-w-4xl mx-auto w-full space-y-6 transition-all duration-500 ease-in-out'
+          }
+        >
           
           <div className="bg-white rounded-3xl shadow-xl shadow-gray-100/50 border border-gray-100 overflow-hidden">
              
