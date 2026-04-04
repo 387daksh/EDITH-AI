@@ -180,8 +180,8 @@ def read_root():
 @app.get("/status")
 def get_status():
     """Check if data has been ingested."""
-    from backend.vector_store import get_collection_count
     try:
+        from backend.vector_store import get_collection_count
         count = get_collection_count()
         return {"ingested": count > 0, "chunks_count": count}
     except:
