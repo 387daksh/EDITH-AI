@@ -3,14 +3,10 @@ import chromadb
 from chromadb.utils import embedding_functions
 from typing import List, Dict, Any
 
-try:
-    from sentence_transformers import CrossEncoder
-except Exception:
-    CrossEncoder = None
-
 # Use persistent client
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CHROMA_DATA_PATH = os.path.join(PROJECT_ROOT, "data", "chroma_db")
+COLLECTION_NAME = "edith_premium_v2"
 
 # Best-in-class embedding model for code
 # Options: "BAAI/bge-base-en-v1.5" (general), "thenlper/gte-base" (fast), 
@@ -26,8 +22,14 @@ _reranker = None
 def get_reranker():
     """Lazy-load the reranker model; return None if unavailable."""
     global _reranker
-    if CrossEncoder is None:
+
+    # Import only when reranking is actually needed. This avoids loading
+    # heavy ML dependencies during ingestion on low-memory deployments.
+    try:
+        from sentence_transformers import CrossEncoder
+    except Exception:
         return None
+
     if _reranker is None:
         print("Loading reranker model...", flush=True)
         _reranker = CrossEncoder(RERANKER_MODEL, max_length=512)
@@ -43,9 +45,26 @@ def get_collection():
     emb_fn = embedding_functions.DefaultEmbeddingFunction()
         
     return client.get_or_create_collection(
-        name="edith_premium_v2",  # New collection for better embeddings
+        name=COLLECTION_NAME,  # New collection for better embeddings
         embedding_function=emb_fn
     )
+
+
+def get_collection_count() -> int:
+    """Return the persisted chunk count without initializing embeddings."""
+    try:
+        client = get_db_client()
+        existing = client.list_collections()
+        collection_names = {
+            getattr(collection, "name", collection) for collection in existing
+        }
+        if COLLECTION_NAME not in collection_names:
+            return 0
+
+        collection = client.get_collection(name=COLLECTION_NAME)
+        return collection.count()
+    except Exception:
+        return 0
 
 def add_documents(documents: List[Dict[str, Any]]):
     """
