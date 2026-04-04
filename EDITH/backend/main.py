@@ -4,9 +4,15 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 load_dotenv(PROJECT_ROOT / ".env")
 
-# Validate configuration immediately
-from backend.config import validate_environment
-validate_environment()
+# Validate configuration when optional config module is available.
+# This keeps deployment resilient if backend.config is not packaged.
+try:
+    from backend.config import validate_environment
+except ModuleNotFoundError:
+    validate_environment = None
+
+if validate_environment is not None:
+    validate_environment()
 
 from fastapi import FastAPI, HTTPException, Depends
 from pydantic import BaseModel
