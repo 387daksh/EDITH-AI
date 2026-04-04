@@ -9,6 +9,15 @@ EDITH (Enterprise Data Intelligence & Technical Hub) is a hackathon project desi
 - **Risk Radar**: Analyze organizational risk based on various metrics.
 - **Role-Based Access**: Specialized views for Admin, HR, and Employees.
 
+## Screenshots
+
+The screenshots below show the main demo flows in EDITH.
+
+| Dashboard | HR Recruitment | Ask EDITH | Performance | Show Work |
+| --- | --- | --- | --- | --- |
+| ![EDITH Dashboard](Assets/Images/Dashboard.png) | ![HR Recruitment Intelligence](Assets/Images/Recruitement%20Intelligence.png) | ![Ask EDITH chat](Assets/Images/Ask%20Edith.png) | ![Performance](Assets/Images/Performance.png) | ![Show Work analytics](Assets/Images/Show%20Work.png) |
+| Live overview with backend status, code chunks, repositories, and HR docs. | Resume upload and candidate analysis workflow for HR. | Unified Q&A interface for codebase and org questions. | Performance metrics and employee review insights. | Contribution summary, activity heatmap, and task tracking. |
+
 ---
 
 ## 🚀 Getting Started
@@ -27,55 +36,55 @@ The backend is built with FastAPI and handles data ingestion, authentication, an
 
 1.  **Navigate to the project root:**
 
-    ```bash
-    cd e:\EDITH\EDITH
-    ```
+	```bash
+	cd e:\EDITH\EDITH
+	```
 
 2.  **Create a virtual environment:**
 
-    ```bash
-    python -m venv venv
-    ```
+	```bash
+	python -m venv venv
+	```
 
 3.  **Activate the virtual environment:**
-    - **Windows (PowerShell):**
-      ```powershell
-      .\venv\Scripts\activate
-      ```
-    - **Mac/Linux:**
-      ```bash
-      source venv/bin/activate
-      ```
+	- **Windows (PowerShell):**
+	  ```powershell
+	  .\venv\Scripts\activate
+	  ```
+	- **Mac/Linux:**
+	  ```bash
+	  source venv/bin/activate
+	  ```
 
 4.  **Install Python dependencies:**
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+	```bash
+	pip install -r requirements.txt
+	```
 
 5.  **Configure Environment Variables:**
-    Create a `.env` file in the root directory and add your API keys:
+	Create a `.env` file in the root directory and add your API keys:
 
-    ```env
-    # Required for LLM reasoning (Groq is recommended for speed)
-    GROQ_API_KEY=gsk_...
+	```env
+	# Required for LLM reasoning (Groq is recommended for speed)
+	GROQ_API_KEY=gsk_...
 
-    # Optional: OpenAI (if preferred)
-    # OPENAI_API_KEY=sk-...
-    ```
+	# Optional: OpenAI (if preferred)
+	# OPENAI_API_KEY=sk-...
+	```
 
 6.  **Populate Dummy Data:**
-    Run this script to generate users, performance reviews, and leave data:
+	Run this script to generate users, performance reviews, and leave data:
 
-    ```bash
-    python populate_hr_data.py
-    ```
+	```bash
+	python populate_hr_data.py
+	```
 
 7.  **Start the Backend Server:**
-    ```bash
-    uvicorn backend.main:app --reload
-    ```
-    The backend will run at `http://127.0.0.1:8000`.
+	```bash
+	uvicorn backend.main:app --reload
+	```
+	The backend will run at `http://127.0.0.1:8000`.
 
 ### 2. Frontend Setup
 
@@ -83,29 +92,29 @@ The frontend is a React application built with Vite.
 
 1.  **Open a new terminal and navigate to the frontend directory:**
 
-    ```bash
-    cd frontend/stitch
-    ```
+	```bash
+	cd frontend/stitch
+	```
 
 2.  **Install Node dependencies:**
 
-    ```bash
-    npm install
-    ```
+	```bash
+	npm install
+	```
 
 3.  **Configure Frontend Environment:**
-    Create a `.env` file in `frontend/stitch` if you plan to use client-side AI features (optional):
+	Create a `.env` file in `frontend/stitch` if you plan to use client-side AI features (optional):
 
-    ```env
-    # Optional: For Google Gemini integrations on the client side
-    GEMINI_API_KEY=...
-    ```
+	```env
+	# Optional: For Google Gemini integrations on the client side
+	GEMINI_API_KEY=...
+	```
 
 4.  **Start the Development Server:**
-    ```bash
-    npm run dev
-    ```
-    The frontend will typically run at `http://localhost:5173`.
+	```bash
+	npm run dev
+	```
+	The frontend will typically run at `http://localhost:5173`.
 
 ---
 
@@ -127,15 +136,15 @@ _Other employees (e.g., `dhruv@edith.ai`, `kanav@edith.ai`) also use the passwor
 
 1.  **Log In**: Open the frontend URL and log in with one of the credentials above.
 2.  **Ingest Code**:
-    - Log in as **Admin**.
-    - Go to **Code Domain**.
-    - Enter a GitHub URL (e.g., `https://github.com/fastapi/fastapi`) and click **Ingest**.
+	- Log in as **Admin**.
+	- Go to **Code Domain**.
+	- Enter a GitHub URL (e.g., `https://github.com/fastapi/fastapi`) and click **Ingest**.
 3.  **Ask Questions**:
-    - Use **Ask EDITH** to query the ingested codebase.
-    - Example: _"How does the auth dependency work?"_
+	- Use **Ask EDITH** to query the ingested codebase.
+	- Example: _"How does the auth dependency work?"_
 4.  **HR Actions**:
-    - Log in as **HR** to view specific HR dashboards.
-    - Log in as **Employee** to request leave or view performance stats.
+	- Log in as **HR** to view specific HR dashboards.
+	- Log in as **Employee** to request leave or view performance stats.
 
 ## Troubleshooting
 
